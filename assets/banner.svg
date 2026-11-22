@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Sovereign Engine — Gemma-2-9B Persian dual-mode assistant for Kaggle 2x T4">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050812"/>
+      <stop offset="0.55" stop-color="#0a1020"/>
+      <stop offset="1" stop-color="#101b32"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111c33"/>
+      <stop offset="1" stop-color="#0b1222"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" rx="22" fill="url(#bg)"/>
+  <circle cx="1080" cy="20" r="190" fill="#22d3ee" opacity="0.10" filter="url(#blur)"/>
+  <circle cx="900" cy="300" r="180" fill="#818cf8" opacity="0.12" filter="url(#blur)"/>
+  <circle cx="120" cy="300" r="150" fill="#f472b6" opacity="0.06" filter="url(#blur)"/>
+
+  <g opacity="0.35" stroke="#1e293b" stroke-width="1">
+    <path d="M0 58 H1200"/>
+    <path d="M0 118 H1200"/>
+    <path d="M0 178 H1200"/>
+    <path d="M0 238 H1200"/>
+    <path d="M64 0 V300"/>
+    <path d="M760 0 V300"/>
+  </g>
+
+  <text x="64" y="52" fill="#67e8f9" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="4">SOVEREIGN ENGINE</text>
+  <text x="64" y="112" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700">Gemma-2-9B</text>
+  <text x="64" y="151" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Persian Dual-Mode Assistant</text>
+  <text x="64" y="190" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="17">4-bit LoRA+ · Cut-CE · Muon-NS5 · Zero-Sync GPU Gate</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">
+    <rect x="64" y="222" width="92" height="32" rx="16" fill="#0e2a33" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="110" y="243" fill="#67e8f9" text-anchor="middle">CUT-CE</text>
+    <rect x="166" y="222" width="112" height="32" rx="16" fill="#171b3a" stroke="#818cf8" stroke-opacity="0.45"/>
+    <text x="222" y="243" fill="#a5b4fc" text-anchor="middle">MUON-NS5</text>
+    <rect x="288" y="222" width="146" height="32" rx="16" fill="#0d2b25" stroke="#34d399" stroke-opacity="0.45"/>
+    <text x="361" y="243" fill="#6ee7b7" text-anchor="middle">FP16 FAST-PATH</text>
+    <rect x="444" y="222" width="132" height="32" rx="16" fill="#2b1430" stroke="#f472b6" stroke-opacity="0.45"/>
+    <text x="510" y="243" fill="#f9a8d4" text-anchor="middle">RAFT ROUTER</text>
+  </g>
+
+  <g>
+    <rect x="800" y="52" width="336" height="82" rx="14" fill="url(#card)" stroke="#1e293b"/>
+    <rect x="800" y="52" width="5" height="82" rx="2.5" fill="#22d3ee"/>
+    <text x="824" y="80" fill="#67e8f9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">GPU 0</text>
+    <text x="824" y="108" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700">T4 · 16 GB</text>
+    <text x="824" y="126" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="12">12 transformer layers + embeddings</text>
+
+    <rect x="800" y="146" width="336" height="82" rx="14" fill="url(#card)" stroke="#1e293b"/>
+    <rect x="800" y="146" width="5" height="82" rx="2.5" fill="#818cf8"/>
+    <text x="824" y="174" fill="#a5b4fc" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">GPU 1</text>
+    <text x="824" y="202" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700">T4 · 16 GB</text>
+    <text x="824" y="220" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="12">30 transformer layers</text>
+
+    <text x="800" y="264" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="3">ASYMMETRIC SHARDING</text>
+    <text x="1136" y="264" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="end">KAGGLE 2× T4</text>
+  </g>
+
+  <rect x="64" y="276" width="1072" height="2" rx="1" fill="url(#accent)" opacity="0.8"/>
+</svg>

@@ -1,0 +1,24 @@
+# =============================================================================
+# Sovereign Engine — Python dependencies
+# =============================================================================
+# IMPORTANT: PyTorch is intentionally NOT listed here.
+# Kaggle images already ship a CUDA-enabled PyTorch build that matches the
+# T4 driver. Reinstalling torch from PyPI can replace it with a CPU/CUDA build
+# that does not work on Kaggle. Install this file on top of the Kaggle image.
+# =============================================================================
+
+# Core modelling stack
+transformers>=4.44,<5
+accelerate>=0.33
+peft>=0.12,<1
+bitsandbytes>=0.43
+
+# Data + tokenizer
+datasets>=2.20
+sentencepiece>=0.2.0
+protobuf>=4.25
+safetensors>=0.4
+huggingface_hub>=0.24
+
+# Chat UI (the code targets the Gradio 5 API)
+gradio>=5.0,<6

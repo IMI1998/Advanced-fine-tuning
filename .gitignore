@@ -1,0 +1,50 @@
+# =============================================================================
+# Sovereign Engine — repository hygiene
+# =============================================================================
+
+# ── Model weights and training artifacts ─────────────────────────────────────
+gemma2_9b_persian_godmode_lora/
+Gemma2_9B_Persian_GodMode_LoRA.zip
+gemma_master_pipeline/
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.zip
+
+# ── Hugging Face / Kaggle caches ─────────────────────────────────────────────
+.cache/
+huggingface/
+/kaggle/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Editors / OS ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
