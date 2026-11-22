@@ -86,24 +86,27 @@
 
 ```mermaid
 flowchart TB
-    subgraph K["Kaggle · 2× T4 · 16 GB each"]
-        G0["GPU 0<br/>embed_tokens + norm + lm_head<br/>layers 0–11"]
-        G1["GPU 1<br/>layers 12–41"]
-    end
+    M["Gemma-2-9B-IT<br/>bnb 4-bit"]
+    G0["GPU 0 · 16 GB<br/>embed_tokens + norm + lm_head<br/>layers 0–11"]
+    G1["GPU 1 · 16 GB<br/>layers 12–41"]
+    L["LoRA r=16 · alpha=32<br/>q / k / v / o / gate / up / down"]
+    T["SovereignCutCETrainer<br/>Cut-CE · Muon-NS5 · LLRD · LoRA+"]
+    P["DARE-style prune 15%<br/>FP16 fast-path · 294 modules"]
+    S["LoRA adapter + ZIP<br/>/kaggle/working"]
+    R["Zero-Sync GPU Gate<br/>Persian LUT + Top-64 entropy"]
+    U["RAFT Router<br/>Empathetic / Scientific"]
+    UI["Gradio 5 RTL UI<br/>live telemetry"]
 
-    M["Gemma-2-9B-IT<br/>bnb 4-bit"] --> G0
+    M --> G0
     M --> G1
-
-    G0 --> L["LoRA r=16 · α=32<br/>q / k / v / o / gate / up / down"]
+    G0 --> L
     G1 --> L
-
-    L --> T["SovereignCutCETrainer<br/>Cut-CE · Muon-NS5 · LLRD · LoRA+"]
-    T --> P["DARE-style prune 15%<br/>FP16 fast-path · 294 modules"]
-
-    P --> S["LoRA adapter + ZIP<br/>/kaggle/working"]
-    P --> R["Zero-Sync GPU Gate<br/>Persian LUT + Top-64 entropy"]
-    R --> U["RAFT Router<br/>Empathetic / Scientific"]
-    U --> UI["Gradio 5 RTL UI<br/>live telemetry"]
+    L --> T
+    T --> P
+    P --> S
+    P --> R
+    R --> U
+    U --> UI
 ```
 
 <div dir="rtl" align="right">
